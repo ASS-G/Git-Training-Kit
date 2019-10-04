@@ -19,6 +19,7 @@
   8. [**Review history**](#review-history)
   9. [**Redo commits**](#redo-commits)
   10. [**Synchronize changes**](#synchronize-changes)
+  11. [**Workflow Summary**](#workflow-summary)
   
   
 ## What Is Version Control?
@@ -200,6 +201,24 @@ Downloads bookmark history and incorporates changes
 $ git pull
 ```
 
+## Workflow Summary
+You now have everything you need to successfully clone a repository, create a branch, make changes, and push those changes up to a master branch. Your workflow should look something like this:
+- `git clone <url>` (clone a Git repository)
+- `cd` (change directory) into your newly cloned repository
+- `git checkout -b <branch-name`> (create and switch to your new branch)
+- `git status`(the output of this should be pretty boring right now)
+- make your changes
+- `git status` (you should see a list of the files you changed now)
+- `git diff` (make sure you actually want these changes)
+- `git add` (add your changes to your staging index)
+- `git status` (yes, it’s my favorite command, do it)
+- `git commit` (commit your changes)
+- `git push` (push your changes up to the remote branch)
+- merge your changes in GitHub or other cloud VCS services
+- `git checkout master` (switch back to the master branch)
+- `git pull` (pull down the changes your just merged)
+- `git status` (just to make sure everything is nice and clean)
+- repeat! (except step 1, you only need to clone once)
 
 
 ###### [[Back to Top]](#----git-and-github-training-kit--)
