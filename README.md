@@ -9,26 +9,54 @@
 </p>
 
 ## Index
-  1. [**Install Git**](#install-git)
-  2. [**Configure tooling**](#configure-tooling)
-  3. [**Create repositories**](#create-repositories)
-  4. [**Make changes**](#make-changes)
-  5. [**Group changes**](#group-changes)
-  6. [**Review history**](#review-history)
-  7. [**Redo commits**](#redo-commits)
-  8. [**Synchronize changes**](#synchronize-changes)
+  1. [**What Is Version Control?**](#what-is-version-control)
+  2. [**What Is Git?**](#what-is-git)
+  3. [**Getting Started**](#getting-started)
+  4. [**Configure tooling**](#configure-tooling)
+  5. [**Create repositories**](#create-repositories)
+  6. [**Make changes**](#make-changes)
+  7. [**Group changes**](#group-changes)
+  8. [**Review history**](#review-history)
+  9. [**Redo commits**](#redo-commits)
+  10. [**Synchronize changes**](#synchronize-changes)
   
   
-## Install Git
-GitHub provides desktop clients that include a graphical user interface for the most common repository actions and an automatically updating command line edition of Git for advanced scenarios.
+## What Is Version Control?
+Version control helps developers track and manage changes to a software project’s code. As a software project grows, version control becomes essential. Take WordPress…
+
+At this point, WordPress is a pretty big project. If a core developer wanted to work on one specific part of the WordPress codebase, it wouldn’t be safe or efficient to have them directly edit the “official” source code.
+
+Instead, version control lets developers safely work through **branching** and **merging**.
+
+With **branching**, a developer duplicates part of the source code (called the repository). The developer can then safely make changes to that part of the code without affecting the rest of the project.
+
+Then, once the developer gets his or her part of the code working properly, he or she can **merge** that code back into the main source code to make it official.
+
+All of these changes are then tracked and can be reverted if need be.
+
+
+## What Is Git?
+Git is a specific **open-source version control system** created by Linus Torvalds in 2005.
+
+Specifically, Git is a distributed version control system, which means that the entire codebase and history is available on every developer’s computer, which allows for easy branching and merging.
+
+According to a Stack Overflow developer survey, **over 87% of developers use Git**.
+
+
+## Getting Started 
+Follow the instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) to install git (if it's not already installed). Note that for this tutorial we will be using git on the command line only. While there are some great git GUIs (graphical user interfaces), We think it's easier to learn git using git-specific commands first and then to try out a git GUI once you're more comfortable with the command. 
+
+
+### Install Git
+Git distributions for Linux and POSIX systems are available on the official Git SCM website.
+
+#### Git for all platforms (Recommended) 
+http://git-scm.com
+
+Alternatively, GitHub provides desktop clients that include a graphical user interface for the most common repository actions.
 
 #### GitHub Desktop
 https://desktop.github.com/
-
-Git distributions for Linux and POSIX systems are available on the official Git SCM website.
-
-#### Git for all platforms
-http://git-scm.com
 
 
 ## Configure tooling
