@@ -18,6 +18,7 @@
   7. [**Redo commits**](#redo-commits)
   8. [**Synchronize changes**](#synchronize-changes)
   
+  
 ## Install Git
 GitHub provides desktop clients that include a graphical user interface for the most common repository actions and an automatically updating command line edition of Git for advanced scenarios.
 
@@ -29,168 +30,149 @@ Git distributions for Linux and POSIX systems are available on the official Git 
 #### Git for all platforms
 http://git-scm.com
 
-## Configure tooling
-Configure user information for all local repositories
 
+## Configure tooling
+##### Configure user information for all local repositories
+
+Sets the name you want attached to your commit transactions
 ```bash
 $ git config --global user.name "[name]"
 ```
 
-Sets the name you want attached to your commit transactions
-
+Sets the email you want attached to your commit transactions
 ```bash
 $ git config --global user.email "[email address]"
 ```
 
-Sets the email you want attached to your commit transactions
-
 ## Create repositories
-Start a new repository or obtain one from an existing URL
+##### Start a new repository or obtain one from an existing URL
 
+Creates a new local repository with the specified name
 ```bash
 $ git init [project-name]
 ```
 
-Creates a new local repository with the specified name
-
+Downloads a project and its entire version history
 ```bash
 $ git clone [url]
 ```
 
-Downloads a project and its entire version history
 
 ## Make changes
-Review edits and craft a commit transaction
+##### Review edits and craft a commit transaction
 
+Lists all new or modified files to be committed
 ```bash
 $ git status
 ```
 
-Lists all new or modified files to be committed
-
+Shows file differences not yet staged
 ```bash
 $ git diff
 ```
 
-Shows file differences not yet staged
-
+Snapshots the file in preparation for versioning
 ```bash
 $ git add [file]
 ```
 
-Snapshots the file in preparation for versioning
-
+Shows file differences between staging and the last file version (file in previous commit)
 ```bash
 $ git diff --staged
 ```
 
-Shows file differences between staging and the last file version (file in previous commit)
-
+Unstages the file, but preserves its contents
 ```bash
 $ git reset [file]
 ```
 
-## Group changes
-Name a series of commits and combine completed efforts
 
+## Group changes
+##### Name a series of commits and combine completed efforts
+
+Lists all local branches in the current repository
 ```bash
 $ git branch
 ```
 
-Lists all local branches in the current repository
-
+Creates a new branch
 ```bash
 $ git branch [branch-name]
 ```
 
-Creates a new branch
-
+Switches to the specified branch and updates working directory
 ```bash
 $ git checkout [branch-name]
 ```
 
-Switches to the specified branch and updates working directory
-
+Combines the specified branch’s history into the current branch
 ```bash
 $ git merge [branch-name]
 ```
 
-Combines the specified branch’s history into the current branch
-
+Deletes the specified branch
 ```bash
 $ git branch -d [branch-name]
 ```
 
-Deletes the specified branch
 
 ## Review history
-Browse and inspect the evolution of project files
+##### Browse and inspect the evolution of project files
 
+Lists version history for the current branch
 ```bash
 $ git log
 ```
 
-Lists version history for the current branch
-
+Lists version history for the file, including renames
 ```bash
 $ git log --follow [file]
 ```
 
-Lists version history for the file, including renames
-
-```bash
-$ git diff [first-branch]...[second-branch]
-```
-
-Shows content differences between two branches
-
+Outputs metadata and content changes of the specified commit
 ```bash
 $ git show [commit]
 ```
 
-Outputs metadata and content changes of the specified commit
 
 ## Redo commits
-Erase mistakes and craft replacement history
+##### Erase mistakes and craft replacement history
 
+Undoes all commits after [commit], preserving changes locally
 ```bash
 $ git reset [commit]
 ```
 
-Undoes all commits after [commit], preserving changes locally
-
+Discards all history and changes back to the specified commit
 ```bash
 $ git reset --hard [commit]
 ```
 
-Discards all history and changes back to the specified commit
 
 ## Synchronize changes
-Register a remote (URL) and exchange repository history
+##### Register a remote (URL) and exchange repository history
 
+Downloads all history from the remote repository
 ```bash
 $ git fetch [remote]
 ```
 
-Downloads all history from the remote repository
-
+Combines the remote branch into the current local branch
 ```bash
 $ git merge [remote]/[branch]
 ```
 
-Combines the remote branch into the current local branch
-
+Uploads all local branch commits to GitHub
 ```bash
 $ git push [remote] [branch]
 ```
 
-Uploads all local branch commits to GitHub
-
+Downloads bookmark history and incorporates changes
 ```bash
 $ git pull
 ```
 
-Downloads bookmark history and incorporates changes
+
 
 ###### [[Back to Top]](#----git-and-github-training-kit--)
 
