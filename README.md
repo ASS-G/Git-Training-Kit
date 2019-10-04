@@ -8,7 +8,16 @@
   Sourced by Active Specialized Support Group (ASS-G)
 </p>
 
-
+## Index
+  1. [**Install Git**](#install-git)
+  2. [**Configure tooling**](#configure-tooling)
+  3. [**Create repositories**](#create-repositories)
+  4. [**Make changes**](#make-changes)
+  5. [**Group changes**](#group-changes)
+  6. [**Review history**](#review-history)
+  7. [**Redo commits**](#redo-commits)
+  8. [**Synchronize changes**](#synchronize-changes)
+  
 ## Install Git
 GitHub provides desktop clients that include a graphical user interface for the most common repository actions and an automatically updating command line edition of Git for advanced scenarios.
 
@@ -23,11 +32,15 @@ http://git-scm.com
 ## Configure tooling
 Configure user information for all local repositories
 
+```bash
 $ git config --global user.name "[name]"
+```
 
 Sets the name you want attached to your commit transactions
 
+```bash
 $ git config --global user.email "[email address]"
+```
 
 Sets the email you want attached to your commit transactions
 
@@ -71,19 +84,11 @@ Snapshots the file in preparation for versioning
 $ git diff --staged
 ```
 
-Shows file differences between staging and the last file version
+Shows file differences between staging and the last file version (file in previous commit)
 
 ```bash
 $ git reset [file]
 ```
-
-Unstages the file, but preserves its contents
-
-```bash
-$ git commit -m"[descriptive message]"
-```
-
-Records file snapshots permanently in version history
 
 ## Group changes
 Name a series of commits and combine completed efforts
@@ -117,71 +122,6 @@ $ git branch -d [branch-name]
 ```
 
 Deletes the specified branch
-
-## Refactor file names
-Relocate and remove versioned files
-
-```bash
-$ git rm [file]
-```
-
-Deletes the file from the working directory and stages the deletion
-
-```bash
-$ git rm --cached [file]
-```
-
-Removes the file from version control but preserves the file locally
-
-```bash
-$ git mv [file-original] [file-renamed]
-```
-
-Changes the file name and prepare it for commit
-
-## Suppress tracking
-Exclude temporary files and paths
-
-```bash
-*.log
-build/
-temp-*
-```
-
-A text file named .gitignore suppresses accidental versioning of files and paths matching the specified patterns
-
-```bash
-$ git ls-files --others --ignored --exclude-standard
-```
-
-Lists all ignored files in this project
-
-## Save fragments
-Shelve and restore incomplete changes
-
-```bash
-$ git stash
-```
-
-Temporarily stores all modified tracked files
-
-```bash
-$ git stash pop
-```
-
-Restores the most recently stashed files
-
-```bash
-$ git stash list
-```
-
-Lists all stashed changesets
-
-```bash
-$ git stash drop
-```
-
-Discards the most recently stashed changeset
 
 ## Review history
 Browse and inspect the evolution of project files
