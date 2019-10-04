@@ -252,6 +252,6 @@ $ git pull
 
 Downloads bookmark history and incorporates changes
 
-###### [[Back to Top]](#----)
+###### [[Back to Top]](#----git-and-github-training-kit--)
 
 ![wave](http://cdn.thekrishna.in/img/common/border.png)
